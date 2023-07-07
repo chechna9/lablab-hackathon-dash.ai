@@ -1,10 +1,13 @@
 import Navbar from "../../components/navbar/navbar";
+import HeroSection from "./hero_section";
 // import HeroSection from "./hero_section";
 
 const LandingPage = () => {
     return ( 
-        <main>
+        <main className="relative">
            <Navbar/>
+           <HeroSection/>
+           
         </main>
      );
 }

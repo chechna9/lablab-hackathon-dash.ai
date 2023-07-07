@@ -12,7 +12,7 @@ const Navbar = () => {
     
   };
   return (
-    <nav className="flex justify-evenly items-center my-2">
+    <nav className="flex justify-evenly items-center py-1 fixed w-full right-[50%] translate-x-[50%] backdrop-blur-sm z-10">
       <img src={assets.blackLogo} alt="" className="w-[80px]" />
       <ul className="flex justify-evenly w-[50vw] ">
         <NavLi
