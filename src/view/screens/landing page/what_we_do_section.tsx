@@ -12,11 +12,15 @@ const WhatWeDoSection = () => {
         </p>
       </div>
       <div className="bg-shape3 flex-[2] bg-cover bg-no-repeat h-full relative flex items-center justify-center">
-
         {/* video */}
         <div className="bg-white rounded-[50px] h-[50%] w-[50%] flex items-center justify-center">
-            <button><img src={assets.playIcon} alt="" className="hover:scale-110 transition-all "/></button>
-            
+          <button>
+            <img
+              src={assets.playIcon}
+              alt=""
+              className="hover:scale-110 transition-all "
+            />
+          </button>
         </div>
         {/* top shape */}
         <img
