@@ -1,23 +1,40 @@
 import { assets } from "../../../utils/assets";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
     <section className="px-10 h-screen flex flex-col justify-evenly items-center relative">
-      <h1 className="font-bold text-[64px] text-center">
+      <motion.h1
+        className="font-bold text-[64px] text-center"
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{delay:0.2}}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         Analyse your client’s feedbacks
         <br /> in a <span className="text-myRed">click</span>
-      </h1>
-      <p className="text-[32px] text-center mx-14">
+      </motion.h1>
+      <motion.p className="text-[32px] text-center mx-14"
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{delay:0.2}}
+      viewport={{ once: true, amount: 0.5 }}
+      >
         Harness the power of our{" "}
         <span className="text-myRed font-semibold">AI</span> and{" "}
         <span className="text-myRed font-semibold">GPT-4</span> to effortlessly
         unlock game-changing insights from your{" "}
         <span className="text-myRed font-semibold">E-commerce</span> feedback
         data, all while keeping your hands free.
-      </p>
-      <button className="bg-myRed hover:bg-myDark py-3 px-10 text-white rounded-full font-medium transition-all text-[32px]">
+      </motion.p>
+      <motion.button className="bg-myRed hover:bg-myDark py-3 px-10 text-white rounded-full font-medium transition-all text-[32px]"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{delay:0.2}}
+      viewport={{ once: true, amount: 0.5 }}
+      >
         Get Started
-      </button>
+      </motion.button>
       {/* setting the bg images */}
       {/* top left img */}
       <img

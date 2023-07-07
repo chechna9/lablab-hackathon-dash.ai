@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { HelpCardInterface } from "../../../interfaces/help_card_interface";
 import { assets } from "../../../utils/assets";
 import HelpCard from "../../components/help_card";
@@ -31,7 +32,13 @@ const HowHelpSection = () => {
   ];
   return (
     <section className="flex items-start relative h-screen overflow-clip">
-      <div className="flex-1 ml-4">
+      <motion.div
+        className="flex-1 ml-4"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <h2 className="text-[48px] font-semibold">
           How can we help your E-business
         </h2>
@@ -40,19 +47,29 @@ const HowHelpSection = () => {
           condimentum pellentesque mollis nisi. Enim amet id vulputate duis.
           Tincidunt convallis diam vestibulum elit.
         </p>
-      </div>
-      <div className="flex flex-[2] justify-center space-x-4 -space-y-4 self-center">
+      </motion.div>
+      <div className="flex flex-[2] justify-center space-x-4  self-center">
         {/* cards */}
         {/* firtst col */}
-        <div className="w-[20vw] flex flex-col space-y-4">
+        <motion.div className="w-[20vw] flex flex-col space-y-4"
+          initial={{ y: 0 }}
+          whileInView={{ y: 25 }}
+          transition={{delay:0.7}}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <HelpCard props={help_cards[0]} />
           <HelpCard props={help_cards[2]} />
-        </div>
+        </motion.div>
         {/* second col */}
-        <div className="w-[20vw] flex flex-col space-y-4">
+        <motion.div className="w-[20vw] flex flex-col space-y-4"
+        initial={{ y: 0}}
+        whileInView={{ y: -25 }}
+        transition={{delay:0.7}}
+        viewport={{ once: true, amount: 0.5 }}
+        >
           <HelpCard props={help_cards[1]} />
           <HelpCard props={help_cards[3]} />
-        </div>
+        </motion.div>
       </div>
       {/* images */}
       <img
@@ -60,20 +77,27 @@ const HowHelpSection = () => {
         alt=""
         className="absolute right-0 w-[50vw] -z-10 bottom-20"
       />
-      <img
+      <motion.img
         src={assets.circle}
         alt=""
         className="absolute right-[20%] -z-20 bottom-0"
+        initial={{  opacity: 0 }}
+        whileInView={{  opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
       />
       <img
         src={assets.shape5}
         alt=""
         className="absolute left-0 bottom-0 -z-10"
       />
-      <img
+      <motion.img
         src={assets.shape6}
         alt=""
         className="absolute left-[25%] bottom-0 -z-10"
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
       />
       <div className="absolute -z-20 left-[40%] -translate-x-[50%] bottom-[10%]">
         <img src={assets.grid} alt="" className="inline" />
