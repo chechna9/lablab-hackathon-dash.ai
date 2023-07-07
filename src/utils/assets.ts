@@ -6,6 +6,7 @@ import shape3 from '../assets/shape3.svg';
 import circle from '../assets/circle.svg';
 import grid from '../assets/Dot.svg';
 import bigCirlce from '../assets/big_circle.svg';
+import playIcon from '../assets/play_icon.svg';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -14,5 +15,6 @@ export const assets = {
     shape3,
     circle,
     grid,
-    bigCirlce
+    bigCirlce,
+    playIcon
 };

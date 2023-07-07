@@ -31,7 +31,7 @@ const HeroSection = () => {
         alt=""
         className="absolute -z-20 right-10  top-[20%]"
       />
-      {/* bottom right left img */}
+      {/* bottom right right img */}
       <div className="absolute -z-20 right-0 -translate-x-[40%] bottom-[10%]">
         <img src={assets.grid} alt="" className="inline" />
         <img src={assets.grid} alt="" className="inline ml-3" />
