@@ -1,3 +1,4 @@
+import Footer from "../../components/footer/fotter";
 import Navbar from "../../components/navbar/navbar";
 import HeroSection from "./hero_section";
 import HowHelpSection from "./how_help_section";
@@ -11,6 +12,7 @@ const LandingPage = () => {
            <HeroSection/>
            <WhatWeDoSection/>
            <HowHelpSection/>
+           <Footer/>
         </main>
      );
 }
