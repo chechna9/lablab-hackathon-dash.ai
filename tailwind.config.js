@@ -10,11 +10,10 @@ module.exports = {
         myRed: "#FF554D",
         myPurple: "#96AAFE",
       },
-     backgroundImage:{
-      'shape3': "url('/src/assets/shape3.svg')",
-     }
-
-      
+      backgroundImage: {
+        shape3: "url('/src/assets/shape3.svg')",
+        signUp: "url('/src/assets/signUp_shape.svg')",
+      },
     },
   },
   plugins: [],

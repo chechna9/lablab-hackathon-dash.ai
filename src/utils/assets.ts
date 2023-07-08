@@ -14,6 +14,8 @@ import empty_wallet from '../assets/empty-wallet.svg';
 import shape4 from '../assets/shape4.svg';
 import shape5 from '../assets/shape5.svg';
 import shape6 from '../assets/shape6.svg';
+import loginShape from '../assets/login_shape.svg';
+import signUpShape from '../assets/signUp_shape.svg';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -30,5 +32,7 @@ export const assets = {
     empty_wallet,
     shape4,
     shape5,
-    shape6
+    shape6,
+    loginShape,
+    signUpShape
 };
