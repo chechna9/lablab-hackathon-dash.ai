@@ -1,0 +1,18 @@
+[33m13ee7d2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mfixScroll[m[33m)[m changed scrollbar shape
+[33m2f648cc[m scrol always on bottom
+[33m1bf3a84[m[33m ([m[1;31morigin/main[m[33m)[m chatt started working need to fix the scroll
+[33m9a7a7f5[m prepared for chat
+[33m705cc12[m added dash stat and more products
+[33m1beabfd[m side bar done
+[33m7b9cafd[m login done and added links to sections
+[33mb5e7bb3[m added password obscurtion
+[33m5bb4397[m register done
+[33m29e9aa1[m added scroll animations on landing page
+[33md2c38ac[m footer done
+[33m9523ef6[m help section done
+[33m1882d60[m what do we do session done
+[33m0bcbdf1[m hero section done
+[33m5bce2f5[m added is active status
+[33me6b9d6a[m navbar done
+[33m2ba3e34[m added assets and setup tailwind css
+[33m6edf786[m Initialize project using Create React App

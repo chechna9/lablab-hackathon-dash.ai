@@ -14,6 +14,7 @@
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "axios": "^1.4.0",
     "framer-motion": "^10.12.18",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

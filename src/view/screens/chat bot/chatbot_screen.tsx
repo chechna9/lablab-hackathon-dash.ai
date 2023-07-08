@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 import { DisscussionInterface } from "../../../interfaces/disscussion_interface";
 import ChatMain from "./chat_main";
 import { useEffect, useRef, useState } from "react";
+import { chatting } from "../../../services/chatting";
 
 const ChatBotScreen = () => {
-  
   const sidebarProps: SideBarInterface = {
     title: "TechStore Review Analysis",
     products: [
@@ -108,17 +108,27 @@ const ChatBotScreen = () => {
     });
   };
 
-  const handleSendMessage = () => {
-    if (inputRef.current?.value) {
-      addMessage(inputRef.current.value);
-      inputRef.current.value = "";
-    }
-  };
   useEffect(() => {
     if (chatRef) chatRef!.current!.scrollTop = chatRef!.current!.scrollHeight;
   }, [disscussion]);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const chatRef = useRef<HTMLDivElement | null>(null);
+  const handleSendMessage = async () => {
+    if (inputRef && inputRef!.current!.value) {
+      const msg = inputRef!.current!.value;
+      addMessage(msg);
+      console.log(msg);
+      
+      inputRef!.current!.value = "";
+      chatting(msg)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
   return (
     <main className="h-screen relative flex ">
       {/* side bar */}
@@ -192,7 +202,6 @@ const ChatBotScreen = () => {
             <motion.button
               whileHover={{ rotate: [0, -10, 10, 0] }}
               onClick={handleSendMessage}
-              
             >
               <img src={assets.sendIcon} alt="" />
             </motion.button>
