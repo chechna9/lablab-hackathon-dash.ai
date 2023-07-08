@@ -20,7 +20,7 @@ const Register = () => {
         <div className="flex flex-col space-y-6">
           <InputField label="Name" />
           <InputField label="Email" />
-          <InputField label="Password" />
+          <InputField label="Password" isObscure={true}/>
         </div>
 
         <label>
