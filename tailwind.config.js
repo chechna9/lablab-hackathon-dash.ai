@@ -15,6 +15,7 @@ module.exports = {
         shape3: "url('/src/assets/shape3.svg')",
         signUp: "url('/src/assets/signUp_shape.svg')",
         login: "url('/src/assets/login_shape.svg')",
+        video: "url('/src/assets/frameVideo.png')",
       },
     },
   },

@@ -20,7 +20,8 @@ const WhatWeDoSection = () => {
       </motion.div>
       <div className="bg-shape3 flex-[2] bg-cover bg-no-repeat h-full relative flex items-center justify-center">
         {/* video */}
-        <div className="bg-white rounded-[50px] h-[50%] w-[50%] flex items-center justify-center">
+        <div className="bg-white rounded-[50px] h-[50%] w-[50%] flex items-center justify-center bg-video bg-cover">
+          
           <motion.button
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1, rotate: [0, 10, -10, 0] }}

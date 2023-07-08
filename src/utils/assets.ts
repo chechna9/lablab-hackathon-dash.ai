@@ -25,6 +25,7 @@ import homeIcon from '../assets/homeIcon.svg';
 import aiIcon from '../assets/aiIcon.svg';
 import chatIcon from '../assets/chatIcon.svg';
 import sendIcon from '../assets/sendIcon.svg';
+import frameVideo from '../assets/frameVideo.png';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -52,5 +53,6 @@ export const assets = {
     homeIcon,
     aiIcon,
     chatIcon,
-    sendIcon
+    sendIcon,
+    frameVideo
 };

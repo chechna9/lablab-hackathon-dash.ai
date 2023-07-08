@@ -3,22 +3,26 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section id="main" className="px-10 h-screen flex flex-col justify-evenly items-center relative">
+    <section
+      id="main"
+      className="px-10 h-screen flex flex-col justify-evenly items-center relative"
+    >
       <motion.h1
         className="font-bold text-[64px] text-center"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{delay:0.2}}
+        transition={{ delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         Analyse your client’s feedbacks
         <br /> in a <span className="text-myRed">click</span>
       </motion.h1>
-      <motion.p className="text-[32px] text-center mx-14"
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{delay:0.2}}
-      viewport={{ once: true, amount: 0.5 }}
+      <motion.p
+        className="text-[32px] text-center mx-14"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         Harness the power of our{" "}
         <span className="text-myRed font-semibold">AI</span> and{" "}
@@ -27,17 +31,15 @@ const HeroSection = () => {
         <span className="text-myRed font-semibold">E-commerce</span> feedback
         data, all while keeping your hands free.
       </motion.p>
-      <motion.button className="bg-myRed hover:bg-myDark py-3 px-10 text-white rounded-full font-medium transition-all text-[32px]"
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{delay:0.2}}
-      viewport={{ once: true, amount: 0.5 }}
-      onClick={
-        () => {
+      <motion.button
+        className="bg-myRed hover:bg-myDark py-3 px-10 text-white rounded-full font-medium transition-all text-[32px]"
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
+        onClick={() => {
           window.location.href = "/chat";
-        }
-        
-      }
+        }}
       >
         Get Started
       </motion.button>
