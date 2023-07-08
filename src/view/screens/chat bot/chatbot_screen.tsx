@@ -12,6 +12,7 @@ import ChatMain from "./chat_main";
 import { useEffect, useRef, useState } from "react";
 
 const ChatBotScreen = () => {
+  
   const sidebarProps: SideBarInterface = {
     title: "TechStore Review Analysis",
     products: [
@@ -111,12 +112,10 @@ const ChatBotScreen = () => {
     if (inputRef.current?.value) {
       addMessage(inputRef.current.value);
       inputRef.current.value = "";
-      
     }
   };
   useEffect(() => {
-    if (chatRef)
-      chatRef!.current!.scrollTop = chatRef!.current!.scrollHeight;
+    if (chatRef) chatRef!.current!.scrollTop = chatRef!.current!.scrollHeight;
   }, [disscussion]);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const chatRef = useRef<HTMLDivElement | null>(null);
@@ -171,7 +170,10 @@ const ChatBotScreen = () => {
         {/* chat */}
         <div className="mx-[5vw] flex flex-col flex-auto overflow-y-auto  space-y-1 mt-2">
           {/* chatt */}
-          <div ref={chatRef} className="flex-auto overflow-y-auto ">
+          <div
+            ref={chatRef}
+            className="flex-auto overflow-y-auto  scrollbar-thumb-white scrollbar-thin  scrollbar-track-transparent"
+          >
             <ChatMain {...disscussion} />
           </div>
           {/* chatt input */}
@@ -190,6 +192,7 @@ const ChatBotScreen = () => {
             <motion.button
               whileHover={{ rotate: [0, -10, 10, 0] }}
               onClick={handleSendMessage}
+              
             >
               <img src={assets.sendIcon} alt="" />
             </motion.button>
