@@ -12,6 +12,8 @@ import ChatMain from "./chat_main";
 import { useEffect, useRef, useState } from "react";
 import { chatting } from "../../../services/chatting";
 
+const fixedDisc: DisscussionInterface = { messages: [] };
+
 const ChatBotScreen = () => {
   const sidebarProps: SideBarInterface = {
     title: "TechStore Review Analysis",
@@ -76,36 +78,24 @@ const ChatBotScreen = () => {
     ],
   };
   const [disscussion, setDisscussion] = useState<DisscussionInterface>({
-    messages: [
-      {
-        message: "Hello",
-        fromBot: false,
-      },
-      {
-        message: "Hello am Dash Ai Bot",
-        fromBot: true,
-      },
-      {
-        message: "We win ?",
-        fromBot: false,
-      },
-      {
-        message:
-          "SIuuuuuu 3-0 Lorem ipsum dolor sit amet consectetur. Vulputate pellentesque suspendisse eget vitae turpis velit proin nibh dolor. Sit at non lorem aliquam iaculis nisi ullamcorper. Sollicitudin duis et scelerisque et consectetur. Ultricies laoreet quam orci nunc sed. Urna purus vestibulum viverra suscipit non a. Tempor euismod nullam lectus ullamcorper non nunc sit fringilla dignissim. Lobortis ullamcorper ut nulla lacus consectetur neque. Felis lobortis enim suspendisse ut sed massa neque sit. Eu eu sit nulla sit leo pellentesque urna sit. Ultrices tristique mi imperdiet pellentesque tempus sapien purus adipiscing turpis. Nibh aliquam nunc tempor ac. Nunc aliquet ipsum velit augue risus. Orci mauris amet bibendum facilisis eget at lorem. Duis at arcu ipsum diam lobortis amet.",
-        fromBot: true,
-      },
-    ],
+    messages: [],
   });
-  const addMessage = (message: string) => {
+  const addMessage = (message: string, fromBot: boolean = false) => {
+    fixedDisc.messages.push({
+      message,
+      fromBot,
+    });
     setDisscussion({
       messages: [
-        ...disscussion.messages,
+        ...fixedDisc.messages,
         {
           message,
-          fromBot: false,
+          fromBot: fromBot,
         },
       ],
     });
+    
+    
   };
 
   useEffect(() => {
@@ -113,16 +103,18 @@ const ChatBotScreen = () => {
   }, [disscussion]);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const chatRef = useRef<HTMLDivElement | null>(null);
+
   const handleSendMessage = async () => {
     if (inputRef && inputRef!.current!.value) {
       const msg = inputRef!.current!.value;
       addMessage(msg);
       console.log(msg);
-      
+
       inputRef!.current!.value = "";
+
       chatting(msg)
-        .then((res) => {
-          console.log(res);
+        .then((res: any) => {
+          addMessage(res.data["output"], true);
         })
         .catch((err) => {
           console.log(err);
@@ -150,6 +142,7 @@ const ChatBotScreen = () => {
             style={{ color: "white", fontSize: "30px" }}
             className="cursor-pointer"
           />
+
           <div className="flex space-x-[3px]">
             {/* title */}
             <div className="bg-white rounded-l-3xl">
@@ -184,7 +177,7 @@ const ChatBotScreen = () => {
             ref={chatRef}
             className="flex-auto overflow-y-auto  scrollbar-thumb-white scrollbar-thin  scrollbar-track-transparent"
           >
-            <ChatMain {...disscussion} />
+            <ChatMain {...fixedDisc} />
           </div>
           {/* chatt input */}
           <div className="bg-myPurple flex p-3 rounded-2xl items-center">
@@ -209,6 +202,7 @@ const ChatBotScreen = () => {
         </div>
 
         {/* img */}
+
         <motion.img
           src={assets.chatIcon}
           alt=""
@@ -218,6 +212,7 @@ const ChatBotScreen = () => {
           viewport={{ once: true }}
         />
       </section>
+
       <img
         src={assets.greenMedCircle}
         alt=""
