@@ -31,7 +31,7 @@ const HowHelpSection = () => {
     },
   ];
   return (
-    <section className="flex items-start relative h-screen overflow-clip">
+    <section id="service" className="flex items-start relative h-screen overflow-clip">
       <motion.div
         className="flex-1 ml-4"
         initial={{ x: -100, opacity: 0 }}

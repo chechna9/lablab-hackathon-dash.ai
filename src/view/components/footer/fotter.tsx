@@ -2,7 +2,7 @@ import { assets } from "../../../utils/assets";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col mx-[10vw] space-y-3 my-[5vh]">
+    <footer id="contact" className="flex flex-col mx-[10vw] space-y-3 my-[5vh]">
       <div className="flex justify-evenly py-[5vh] border-t-2 border-b-2 ">
         {/* first col */}
         <div className="w-[20vw]">

@@ -16,6 +16,9 @@ import shape5 from '../assets/shape5.svg';
 import shape6 from '../assets/shape6.svg';
 import loginShape from '../assets/login_shape.svg';
 import signUpShape from '../assets/signUp_shape.svg';
+import google from '../assets/google.svg';
+import blueMedCircle from '../assets/blueMedCircle.svg';
+import redMedCircle from '../assets/redMedCircle.svg';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -34,5 +37,8 @@ export const assets = {
     shape5,
     shape6,
     loginShape,
-    signUpShape
+    signUpShape,
+    google,
+    blueMedCircle,
+    redMedCircle
 };

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="px-10 h-screen flex flex-col justify-evenly items-center relative">
+    <section id="main" className="px-10 h-screen flex flex-col justify-evenly items-center relative">
       <motion.h1
         className="font-bold text-[64px] text-center"
         initial={{ y: -100, opacity: 0 }}

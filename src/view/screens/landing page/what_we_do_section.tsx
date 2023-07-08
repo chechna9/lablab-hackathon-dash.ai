@@ -3,7 +3,7 @@ import { assets } from "../../../utils/assets";
 
 const WhatWeDoSection = () => {
   return (
-    <section className="flex items-center relative h-screen overflow-clip">
+    <section id="wwd" className="flex items-center relative h-screen overflow-clip">
       <motion.div
         className="flex-1 mx-4"
         initial={{ x: -100, opacity: 0 }}
