@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SideBarInterface } from "../../../interfaces/side_bar_interface";
 import ProductFDBKS from "./product_fdbcs";
 import { assets } from "../../../utils/assets";
+import { motion } from "framer-motion";
 
 const SideBar = (props: SideBarInterface) => {
   const [activeProduct, setActiveProduct] = useState(0);
@@ -27,12 +28,23 @@ const SideBar = (props: SideBarInterface) => {
       })}
       </section>
       
-      <button className="bg-myGreen hover:bg-myRed py-3 px-10 text-white rounded-full font-medium transition-all flex self-center">
+      <motion.button className="bg-myGreen hover:bg-myRed py-3 px-10 text-white rounded-full font-medium transition-all flex self-center"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{delay:0.2}}
+      viewport={{ once: true, amount: 0.5 }}
+      onClick={
+        () => {
+          window.location.href = "/chat";
+        }
+        
+      }
+      >
         DashStat
         
           <img src={assets.statsIcon} alt="" className="w-6 ml-2"/>
         
-      </button>
+      </motion.button>
     </main>
   );
 };

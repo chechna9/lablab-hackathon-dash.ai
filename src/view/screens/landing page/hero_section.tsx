@@ -32,6 +32,12 @@ const HeroSection = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{delay:0.2}}
       viewport={{ once: true, amount: 0.5 }}
+      onClick={
+        () => {
+          window.location.href = "/chat";
+        }
+        
+      }
       >
         Get Started
       </motion.button>

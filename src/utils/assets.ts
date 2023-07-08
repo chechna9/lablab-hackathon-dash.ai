@@ -24,6 +24,7 @@ import statsIcon from '../assets/statsIcon.svg';
 import homeIcon from '../assets/homeIcon.svg';
 import aiIcon from '../assets/aiIcon.svg';
 import chatIcon from '../assets/chatIcon.svg';
+import sendIcon from '../assets/sendIcon.svg';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -50,5 +51,6 @@ export const assets = {
     statsIcon,
     homeIcon,
     aiIcon,
-    chatIcon
+    chatIcon,
+    sendIcon
 };
