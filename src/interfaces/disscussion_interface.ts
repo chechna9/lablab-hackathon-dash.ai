@@ -1,5 +1,5 @@
 import { MessageInterface } from "./message_interface";
 
-export interface DiscussionInterface {
+export interface DisscussionInterface {
     messages: MessageInterface[];
 }

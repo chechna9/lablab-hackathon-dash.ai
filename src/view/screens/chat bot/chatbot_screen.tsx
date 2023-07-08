@@ -5,9 +5,11 @@ import SideBar from "./side_bar";
 import {
   faChevronDown,
   faChevronLeft,
-  faPaperPlane,
+ 
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { DisscussionInterface } from "../../../interfaces/disscussion_interface";
+import ChatMain from "./chat_main";
 
 const ChatBotScreen = () => {
   const sidebarProps: SideBarInterface = {
@@ -72,6 +74,27 @@ const ChatBotScreen = () => {
       },
     ],
   };
+  const disscussion:DisscussionInterface={
+    messages:[
+      {
+        message:"Hello",
+        fromBot:false,
+      },
+      {
+        message:"Hello am Dash Ai Bot",
+        fromBot:true,
+      },
+      {
+        message:"We win ?",
+        fromBot:false
+      },
+      {
+        message:"SIuuuuuu 3-0 Lorem ipsum dolor sit amet consectetur. Vulputate pellentesque suspendisse eget vitae turpis velit proin nibh dolor. Sit at non lorem aliquam iaculis nisi ullamcorper. Sollicitudin duis et scelerisque et consectetur. Ultricies laoreet quam orci nunc sed. Urna purus vestibulum viverra suscipit non a. Tempor euismod nullam lectus ullamcorper non nunc sit fringilla dignissim. Lobortis ullamcorper ut nulla lacus consectetur neque. Felis lobortis enim suspendisse ut sed massa neque sit. Eu eu sit nulla sit leo pellentesque urna sit. Ultrices tristique mi imperdiet pellentesque tempus sapien purus adipiscing turpis. Nibh aliquam nunc tempor ac. Nunc aliquet ipsum velit augue risus. Orci mauris amet bibendum facilisis eget at lorem. Duis at arcu ipsum diam lobortis amet.",
+        fromBot:true,
+      },
+    ]
+
+  };
   return (
     <main className="h-screen relative flex overflow-clip">
       {/* side bar */}
@@ -123,7 +146,10 @@ const ChatBotScreen = () => {
         {/* chat */}
         <div className="mx-[5vw] flex flex-col flex-auto ">
           {/* chatt */}
-          <div className="flex-auto"></div>
+          <div className="flex-auto">
+           <ChatMain {...disscussion}/>
+            
+          </div>
           {/* chatt input */}
           <div className="bg-myPurple flex p-3 rounded-2xl items-center">
             <FontAwesomeIcon
