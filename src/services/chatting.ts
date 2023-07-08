@@ -2,16 +2,14 @@ import axios from "axios";
 
 export const chatting = (msg: string) =>
   new Promise((resolve, reject) => {
-    const url = "https://dashaibackend-production.up.railway.app/predict";
-    const _data = {
-      human_input: msg,
-    };
+    const url = "https://dashaibackend-production-24cd.up.railway.app/predict";
+    
     axios
       .post(url, {
         headers: {
           "Content-Type": "application/json",
         },
-        data: _data,
+        'human_input': msg,
       })
       .then((response) => {
         resolve(response);
