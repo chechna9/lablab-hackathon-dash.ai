@@ -19,6 +19,11 @@ import signUpShape from '../assets/signUp_shape.svg';
 import google from '../assets/google.svg';
 import blueMedCircle from '../assets/blueMedCircle.svg';
 import redMedCircle from '../assets/redMedCircle.svg';
+import greenMedCircle from '../assets/greenMedCircle.svg';
+import statsIcon from '../assets/statsIcon.svg';
+import homeIcon from '../assets/homeIcon.svg';
+import aiIcon from '../assets/aiIcon.svg';
+import chatIcon from '../assets/chatIcon.svg';
 export const assets = {
     whiteLogo,
     blackLogo,
@@ -40,5 +45,10 @@ export const assets = {
     signUpShape,
     google,
     blueMedCircle,
-    redMedCircle
+    redMedCircle,
+    greenMedCircle,
+    statsIcon,
+    homeIcon,
+    aiIcon,
+    chatIcon
 };

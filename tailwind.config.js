@@ -9,6 +9,7 @@ module.exports = {
         myGreen: "#28CDBA",
         myRed: "#FF554D",
         myPurple: "#96AAFE",
+        myPurpleLight: "#CFD7FB",
       },
       backgroundImage: {
         shape3: "url('/src/assets/shape3.svg')",
